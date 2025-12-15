@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f409e34162ed2141aafe71f2efdefd5, type: 3}
+  m_Name: Planet_Merkurius
+  m_EditorClassIdentifier: 
+  planetId: BS_1
+  planetName: Merkurius
+  description: "Petualangan ke Merkurius!\n\nSelamat datang, Petualang Angkasa! \u25A1
+    Siap untuk memulai perjalanan seru menjelajahi galaksi Bima Sakti? Kita akan
+    mulai dengan planet yang pertama dan paling dekat dengan Matahari, yaitu Merkurius!\n\nMerkurius
+    adalah planet yang penuh dengan misteri dan keajaiban. Sebagai planet terkecil
+    di tata surya, Merkurius mungkin tampak kecil, tetapi planet ini punya banyak
+    kejutan. Cobalah bayangkan bagaimana rasanya berada di planet yang sangat panas
+    di siang hari, tetapi juga sangat dingin di malam hari. Apakah mungkin ada rahasia
+    tersembunyi di sana? Siapa tahu!\n\nPenasaran tentang bagaimana rasanya berada
+    di sana atau apakah Merkurius bisa menjadi tempat yang layak dihuni? Ikuti terus
+    petualangan ini untuk menemukan lebih banyak!"
+  facts:
+  - factId: merkurius_fact_1
+    factText: 'Fakta 1 - Ukuran dan Posisi
+
+
+      Merkurius adalah planet terkecil
+      di tata surya kita.
+
+
+      Jaraknya dari Matahari membuatnya menjadi planet
+      yang sangat dekat dengan sumber panas besar kita.
+
+      (Apakah jaraknya ke
+      Matahari bisa mempengaruhi kemungkinan ada kehidupan di sana?)'
+    revealedByDefault: 0
+  - factId: merkurius_fact_2
+    factText: "Fakta 2 - Suhu Ekstrem\n\nSuhu siang hari di Merkurius bisa mencapai
+      430\xB0C\u2014lebih panas dari oven! \u25A1\n\nDi malam hari, suhu bisa turun
+      sampai -180\xB0C\u2014begitu dingin seperti di Antartika! \u2744\u25A1"
+    revealedByDefault: 0
+  - factId: merkurius_fact_3
+    factText: 'Fakta 3 - Tidak Ada Atmosfer Tebal
+
+
+      Merkurius tidak memiliki
+      atmosfer yang tebal, yang berarti tidak ada perlindungan dari suhu ekstrem.
+      Tanpa atmosfer, Merkurius tidak bisa menahan panas atau dingin, jadi suasana
+      di sana bisa berubah-ubah sangat cepat.'
+    revealedByDefault: 0
+  - factId: merkurius_fact_3
+    factText: "Fakta 4 - Kecepatan Rotasi dan Revolusi\n\nSatu hari di Merkurius
+      berlangsung 59 hari Bumi\u2014ya, satu hari yang sangat lama!\n\nSementara
+      itu, satu tahun di Merkurius hanya 88 hari Bumi. Jadi, tahun di Merkurius sangat
+      cepat!"
+    revealedByDefault: 0
+  isHabitable: 0
