@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f409e34162ed2141aafe71f2efdefd5, type: 3}
+  m_Name: Planet_Saturnus
+  m_EditorClassIdentifier: 
+  planetId: BS_6
+  planetName: Saturn
+  description: Saturnus terkenal karena cincin besarnya yang indah. Seperti Jupiter,
+    planet ini tidak memiliki tanah padat. Lingkungannya tenang dari jauh, tetapi
+    sebenarnya sangat dalam dan penuh tekanan. Saturnus lebih berperan sebagai penjaga
+    tata surya daripada calon rumah manusia.
+  facts:
+  - factId: Saturnus_fact_1
+    factText: 'Permukaan: tidak ada tanah padat'
+    revealedByDefault: 0
+  - factId: Saturnus_fact_2
+    factText: 'Cincin: sangat besar dan indah'
+    revealedByDefault: 0
+  - factId: Saturnus_fact_3
+    factText: 'Atmosfer: gas tebal'
+    revealedByDefault: 0
+  - factId: Saturnus_fact_4
+    factText: 'Suhu: sangat dingin'
+    revealedByDefault: 0
+  isHabitable: 0

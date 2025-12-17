@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14c98066f91d9644ad03d07c51ac8ab, type: 3}
+  m_Name: PlanetReason_Merkurius
+  m_EditorClassIdentifier: 
+  planetId: BS_1
+  correctExplanation: '"Betul! Merkurius memang bukan planet yang bisa dihuni. Sebagai
+    planet terdekat dengan Matahari, suhu ekstrem yang terjadi akibat kurangnya atmosfer
+    membuat kehidupan mustahil. Gravitasi yang lebih rendah dan kurangnya air juga
+    menambah kesulitan. Merkurius memang menarik untuk dipelajari, tapi bukan tempat
+    untuk hidup!"'
+  incorrectExplanation: '"Oops! Merkurius ternyata bukan planet yang bisa dihuni!
+    Meskipun berada dekat dengan Matahari, kondisi ekstrem seperti suhu yang sangat
+    panas di siang hari dan sangat dingin di malam hari, serta kekurangan atmosfer
+    dan air cair, membuat planet ini tidak dapat mendukung kehidupan. Selain itu,
+    radiasi Matahari yang sangat kuat berbahaya bagi makhluk hidup. Coba lagi dan
+    pilih planet lain yang lebih ramah!"'

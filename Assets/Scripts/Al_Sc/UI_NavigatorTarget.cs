@@ -15,4 +15,13 @@ public class UI_NavigatorTarget : MonoBehaviour
         if (UI_NavigatorSystem.Instance != null)
             UI_NavigatorSystem.Instance.Hide(this);
     }
+
+    void OnDestroy()
+    {
+        HideNavigator();
+    }
+    void OnDisable()
+    {
+        HideNavigator();
+    }
 }

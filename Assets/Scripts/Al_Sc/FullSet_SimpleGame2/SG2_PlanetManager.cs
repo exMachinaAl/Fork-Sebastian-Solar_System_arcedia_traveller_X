@@ -34,13 +34,34 @@ public class SG2_PlanetManager : MonoBehaviour
         UI_PlayerInTheInformation.RefreshPIH?.Invoke();
     }
 
+
     void GeneratePlanets()
     {
         runtimePlanets.Clear();
 
-        foreach (var p in allPlanets)
-            runtimePlanets.Add(new SG2_PlanetRuntime(p));
+        if (allPlanets != null && allPlanets.Count > 0)
+        {
+            foreach (var p in allPlanets)
+            {
+                runtimePlanets.Add(new SG2_PlanetRuntime(p));
+            }
+
+            // Debug log untuk memverifikasi
+            Debug.Log($"Generated {runtimePlanets.Count} planets.");
+        }
+        else
+        {
+            Debug.LogWarning("All planets list is empty. Ensure allPlanets contains valid data.");
+        }
     }
+
+    // void GeneratePlanets()
+    // {
+    //     runtimePlanets.Clear();
+
+    //     foreach (var p in allPlanets)
+    //         runtimePlanets.Add(new SG2_PlanetRuntime(p));
+    // }
 
     // public void FocusPlanet(string planetId)
     // {

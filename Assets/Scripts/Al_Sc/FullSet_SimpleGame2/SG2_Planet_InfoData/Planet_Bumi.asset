@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f409e34162ed2141aafe71f2efdefd5, type: 3}
+  m_Name: Planet_Bumi
+  m_EditorClassIdentifier: 
+  planetId: BS_3
+  planetName: Bumi
+  description: 'Bumi memiliki permukaan yang beragam: daratan, lautan, dan udara
+    yang seimbang. Planet ini mampu menjaga kondisi yang stabil dalam waktu sangat
+    lama. Kehidupan bisa tumbuh, berkembang, dan saling bergantung satu sama lain
+    di sini.'
+  facts:
+  - factId: Bumi_fact_1
+    factText: 'Suhu: cocok untuk manusia'
+    revealedByDefault: 0
+  - factId: Bumi_fact_2
+    factText: 'Air: banyak air cair'
+    revealedByDefault: 0
+  - factId: Bumi_fact_3
+    factText: 'Atmosfer: ada oksigen untuk bernapas'
+    revealedByDefault: 0
+  - factId: Bumi_fact_4
+    factText: 'Kehidupan: ada tumbuhan, hewan, manusia'
+    revealedByDefault: 0
+  isHabitable: 0

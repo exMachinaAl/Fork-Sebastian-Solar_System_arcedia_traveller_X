@@ -6,6 +6,12 @@ public class SG2_PlanetColliderEnter : MonoBehaviour
 {
     // public string planetId;
     public SG2_PlanetDataSO planet;
+    public SO_QuestCreator storyOfPlanet;
+
+    public void InitStoryPlanet(SO_QuestCreator spt)
+    {
+        storyOfPlanet = spt;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,6 +21,7 @@ public class SG2_PlanetColliderEnter : MonoBehaviour
 
         // foreach (var o in GetComponentsInChildren<Outline>())
         //     o.enabled = true;
+        ActivatePlanetStyQuest();
 
         SG2_PlanetManager.Instance.FocusPlanet(planet.planetId);
         // SG2_PlanetManager.Instance.FocusPlanet(planetId);
@@ -30,5 +37,15 @@ public class SG2_PlanetColliderEnter : MonoBehaviour
         // UI_NavigatorSystem.Instance.ClearAll();
         SG2_PlanetManager.Instance.ClearCurrentPlanet();
         UI_PlayerInTheInformation.RefreshPIH?.Invoke();
+    }
+
+    //##fungsi untuk storyTell
+    public void ActivatePlanetStyQuest()
+    {
+        if (storyOfPlanet != null)
+        {
+            Manager_Quest.Instance.StartQuest(storyOfPlanet);
+        }
+        else Debug.LogWarning("bjir gk ada story");
     }
 }

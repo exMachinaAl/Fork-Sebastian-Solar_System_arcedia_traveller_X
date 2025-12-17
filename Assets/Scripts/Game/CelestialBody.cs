@@ -14,6 +14,7 @@ public class CelestialBody : GravityObject {
     Transform meshHolder;
 
     [Header("Al_custom")]
+    public SO_QuestCreator PlanetStyQuest;
     public SG2_PlanetDataSO planetQInformation;
     public Transform rootSetFocusQuestTrigger;
     public GameObject prefabFocusQuestTrigger;
@@ -53,6 +54,7 @@ public class CelestialBody : GravityObject {
         }
 
         qstColl.GetComponent<SG2_PlanetColliderEnter>().planet = planetQInformation;
+        qstColl.GetComponent<SG2_PlanetColliderEnter>().InitStoryPlanet(PlanetStyQuest);
     }
 
 

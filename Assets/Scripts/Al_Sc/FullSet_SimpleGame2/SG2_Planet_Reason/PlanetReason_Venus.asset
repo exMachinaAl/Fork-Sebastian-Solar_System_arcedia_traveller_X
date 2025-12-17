@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14c98066f91d9644ad03d07c51ac8ab, type: 3}
+  m_Name: PlanetReason_Venus
+  m_EditorClassIdentifier: 
+  planetId: BS_2
+  correctExplanation: '"Benar! Venus memang bukan tempat yang bisa dihuni. Meskipun
+    ukurannya mirip dengan Bumi, suhu permukaan yang sangat panas, atmosfer yang
+    penuh dengan gas beracun, dan tekanan atmosfer yang luar biasa tinggi membuat
+    planet ini tidak bisa mendukung kehidupan seperti di Bumi. Meskipun Venus bisa
+    menjadi objek studi yang menarik bagi ilmuwan, sangat sulit untuk membayangkan
+    adanya kehidupan di sana."'
+  incorrectExplanation: "\"Ups! Venus ternyata bukan tempat yang bisa dihuni! Meskipun
+    ukurannya hampir sama dengan Bumi, suhu di Venus sangat panas, bahkan lebih panas
+    dari Merkurius! Suhu permukaan bisa mencapai sekitar 470\xB0C, cukup panas untuk
+    melelehkan timah! Selain itu, atmosfer Venus penuh dengan gas beracun seperti
+    karbon dioksida dan sulfur dioksida, yang membuatnya berbahaya bagi manusia.
+    Terakhir, tekanan atmosfer di Venus sekitar 92 kali lebih besar daripada Bumi,
+    yang membuatnya sangat sulit untuk bertahan hidup. Pilih planet lain yang lebih
+    ramah bagi kehidupan!\""

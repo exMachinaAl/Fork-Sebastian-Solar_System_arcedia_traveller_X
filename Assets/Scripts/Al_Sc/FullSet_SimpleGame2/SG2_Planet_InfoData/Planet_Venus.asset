@@ -14,9 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetId: BS_2
   planetName: Venus
-  description: is just venus
+  description: Venus terlihat indah dari jauh karena tertutup awan tebal. Namun awan
+    itu bukan awan air seperti di Bumi. Planet ini seperti terbungkus selimut yang
+    sangat rapat, membuat apa pun di bawahnya terperangkap. Lingkungannya sangat
+    keras dan tidak ramah bagi makhluk hidup seperti manusia.
   facts:
   - factId: venus_fact_1
-    factText: suhu 1C
+    factText: 'Suhu: sangat panas (lebih panas dari Merkurius)'
+    revealedByDefault: 0
+  - factId: venus_fact_2
+    factText: 'Atmosfer: sangat tebal dan beracun'
+    revealedByDefault: 0
+  - factId: venus_fact_3
+    factText: 'Air: hampir tidak ada air'
+    revealedByDefault: 0
+  - factId: venus_fact_4
+    factText: 'Tekanan udara: sangat tinggi'
     revealedByDefault: 0
   isHabitable: 0

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f409e34162ed2141aafe71f2efdefd5, type: 3}
+  m_Name: Planet_Uranus
+  m_EditorClassIdentifier: 
+  planetId: BS_7
+  planetName: Uranus
+  description: "Uranus adalah planet yang tampak tenang dan berwarna biru pucat.
+    Planet ini berputar dengan cara yang tidak biasa, seolah-olah sedang \u201Ctidur
+    menyamping\u201D. Lingkungannya sangat asing bagi manusia dan tidak menyerupai
+    Bumi sama sekali."
+  facts:
+  - factId: Uranus_fact_1
+    factText: 'Suhu: sangat dingin'
+    revealedByDefault: 0
+  - factId: Uranus_fact_2
+    factText: 'Atmosfer: gas dan es'
+    revealedByDefault: 0
+  - factId: Uranus_fact_3
+    factText: "Kemiringan: planet \u201Ctidur menyamping\u201D"
+    revealedByDefault: 0
+  - factId: Uranus_fact_4
+    factText: 'Air: tidak ada air cair di permukaan'
+    revealedByDefault: 0
+  isHabitable: 0

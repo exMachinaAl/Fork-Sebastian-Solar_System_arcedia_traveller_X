@@ -28,6 +28,10 @@ public class PlayerController : GravityObject {
 	public float mass = 70;
 	public LayerMask walkableMask;
 	public Transform feet;
+	// Flag untuk menunjukkan apakah PlayerController seharusnya aktif
+    public bool ShouldBeActive { get; private set; } = false;
+
+
 
 	// Private
 	Rigidbody rb;
@@ -108,6 +112,13 @@ public class PlayerController : GravityObject {
 		Vector3 flatForward = Vector3.ProjectOnPlane(transform.forward, (transform.position - referenceBody.Position).normalized);
 		smoothYaw = yaw = Mathf.Atan2(flatForward.x, flatForward.z) * Mathf.Rad2Deg;
 	}
+
+	// Fungsi untuk mengubah status aktif dari PlayerController
+    public void SetActive(bool active)
+    {
+        ShouldBeActive = active;
+        gameObject.SetActive(active);  // Matikan atau hidupkan GameObject
+    }
 
 
 

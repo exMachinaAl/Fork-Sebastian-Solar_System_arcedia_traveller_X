@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f409e34162ed2141aafe71f2efdefd5, type: 3}
+  m_Name: Planet_Jupiter
+  m_EditorClassIdentifier: 
+  planetId: BS_5
+  planetName: Jupiter
+  description: Jupiter adalah planet raksasa yang tidak memiliki permukaan keras.
+    Seluruh bagiannya dipenuhi gas yang terus bergerak dan berputar. Planet ini lebih
+    mirip bola badai raksasa daripada tempat berpijak. Banyak benda kecil di sekitarnya
+    tertarik oleh kekuatannya.
+  facts:
+  - factId: Jupiter_fact_1
+    factText: 'Permukaan: tidak ada tanah padat'
+    revealedByDefault: 0
+  - factId: Jupiter_fact_2
+    factText: 'Atmosfer: badai sangat besar'
+    revealedByDefault: 0
+  - factId: Jupiter_fact_3
+    factText: 'Ukuran: sangat besar'
+    revealedByDefault: 0
+  - factId: Jupiter_fact_4
+    factText: 'Suhu: sangat dingin di atas, panas di dalam'
+    revealedByDefault: 0
+  isHabitable: 0

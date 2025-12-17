@@ -112,19 +112,56 @@ public class SG2_UI_PlanetPanel : MonoBehaviour
     {
         planetName.text = runtime.data.planetName;
 
-        StringBuilder sb = new();
+        StringBuilder sb = new StringBuilder();
 
-        sb.AppendLine(runtime.data.description);
+        // Menambahkan deskripsi dengan warna
+        // sb.AppendLine($"<color=#00FF00>{runtime.data.description}</color>");
+        sb.AppendLine($"{runtime.data.description}");
 
+        int iterasi_fakta = 1;
         foreach (var fact in runtime.data.facts)
         {
             bool revealed = runtime.revealedFacts[fact.factId];
             sb.AppendLine("");
-            sb.AppendLine(revealed ? fact.factText : "missing information ???");
+            
+            // Menambahkan warna pada fakta berdasarkan status 'revealed'
+            if (revealed)
+            {
+                sb.AppendLine($"<color=#0000FF>{fact.factText}</color>"); // Fakta yang ditemukan, warna biru
+                // sb.AppendLine($"{fact.factText}"); // Fakta yang ditemukan, warna biru
+            }
+            else
+            {
+                sb.AppendLine($"<color=#FF0000>Informasi tidak ditemukan, carilah: Data_{iterasi_fakta} untuk membuka</color>"); // Fakta yang tidak ditemukan, warna merah
+            }
+
+            iterasi_fakta++;
         }
 
+        // Set teks hasil akhirnya
         dataText.text = sb.ToString();
     }
+
+
+    // public void Refresh()
+    // {
+    //     planetName.text = runtime.data.planetName;
+
+    //     StringBuilder sb = new();
+
+    //     sb.AppendLine(runtime.data.description);
+
+    //     int iterasi_fakta = 1;
+    //     foreach (var fact in runtime.data.facts)
+    //     {
+    //         bool revealed = runtime.revealedFacts[fact.factId];
+    //         sb.AppendLine("");
+    //         sb.AppendLine(revealed ? fact.factText : $"Informasi tidak ditemukan, carilah: Data_{iterasi_fakta} untuk membuka");
+    //         iterasi_fakta++;
+    //     }
+
+    //     dataText.text = sb.ToString();
+    // }
 }
 
 

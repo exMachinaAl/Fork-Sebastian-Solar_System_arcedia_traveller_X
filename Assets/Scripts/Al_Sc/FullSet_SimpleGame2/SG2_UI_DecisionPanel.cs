@@ -7,6 +7,7 @@ public class SG2_UI_DecisionPanel : MonoBehaviour
     public bool isInformationShow = false;
     [SerializeField]private CanvasGroup canvasGroup; // Tambahkan CanvasGroup untuk kontrol visibilitas
 
+    public Button btnClose;
     public Button btnYes;
     public Button btnNo;
 
@@ -16,6 +17,7 @@ public class SG2_UI_DecisionPanel : MonoBehaviour
     }
     void Start()
     {
+        btnClose.onClick.AddListener(OnClose);
         btnYes.onClick.AddListener(DecideYes);
         btnNo.onClick.AddListener(DecideNo);
 
@@ -43,9 +45,23 @@ public class SG2_UI_DecisionPanel : MonoBehaviour
         {
             isInformationShow = false;
             Time.timeScale = 1;
+
+            // #########
             var shipSc = FindObjectOfType<Ship>();
-            if (!shipSc.IsThePlayerPiloting())
-                FindObjectOfType<PlayerController>().OnResumeGame();
+            // Periksa apakah pemain mengendarai pesawat
+            if (shipSc != null && !shipSc.IsThePlayerPiloting())
+            {
+                // Cari PlayerController hanya jika pesawat tidak dikendarai oleh pemain
+                var playerController = FindObjectOfType<PlayerController>();
+
+                // Periksa jika PlayerController ditemukan dan apakah aktif
+                if (playerController != null && playerController.ShouldBeActive)
+                {
+                    playerController.OnResumeGame();
+                }
+            }
+            // #########
+
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked; // Mengunci kursor di tengah
             SetUIActive(false); // Panggil fungsi untuk menyembunyikan UI
@@ -60,6 +76,10 @@ public class SG2_UI_DecisionPanel : MonoBehaviour
         }
     }
 
+    public void OnClose()
+    {
+        ToggleUI();
+    }
     public void DecideYes()
     {
         SG2_PlanetManager.Instance.MakeDecision(true);

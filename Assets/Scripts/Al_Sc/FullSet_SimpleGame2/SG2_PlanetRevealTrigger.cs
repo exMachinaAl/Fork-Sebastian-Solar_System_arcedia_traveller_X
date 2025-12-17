@@ -4,6 +4,7 @@ public class SG2_PlanetRevealTrigger : MonoBehaviour
 {
     public string factId;
     public Outline outline;
+    public string[] QstoryId;
 
 
     // void OnTriggerEnter(Collider other)
@@ -63,6 +64,20 @@ public class SG2_PlanetRevealTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         SG2_PlanetManager.Instance.RevealFact(factId);
+
+        RunStoryQuest();
+
         gameObject.SetActive(false);
+    }
+
+    public void RunStoryQuest()
+    {
+        if (QstoryId != null)
+        {
+            foreach (var stepEldge in QstoryId)
+            {
+                ST_QuestEventsV1.OnEnterArea?.Invoke(stepEldge);
+            }
+        }
     }
 }

@@ -12,13 +12,13 @@ public class Ship : GravityObject {
 	public LayerMask groundedMask;
 	public GameObject window;
 
-	[Header ("Handling")]
+	[Header("Handling")]
 	public float thrustStrength = 20;
 	public float rotSpeed = 5;
 	public float rollSpeed = 30;
 	public float rotSmoothSpeed = 10;
 
-	[Header ("Interact")]
+	[Header("Interact")]
 	public Interactable flightControls;
 
 	[Header("Floating System")]
@@ -43,12 +43,13 @@ public class Ship : GravityObject {
 	KeyCode backwardKey = KeyCode.S;
 	KeyCode leftKey = KeyCode.A;
 	KeyCode rightKey = KeyCode.D;
+	KeyCode remoteHatch = KeyCode.R;
 
-	void Awake () {
-		InitRigidbody ();
+	void Awake() {
+		InitRigidbody();
 		targetRot = transform.rotation;
 		smoothedRot = transform.rotation;
-		inputSettings.Begin ();
+		inputSettings.Begin();
 	}
 
 	//###Al floating change ref
@@ -58,16 +59,38 @@ public class Ship : GravityObject {
 	// }
 
 
-	void Update () {
+	void Update() {
 		if (shipIsPiloted) {
-			HandleMovement ();
+			HandleMovement();
 		}
 
 		// Animate hatch
 		float hatchTargetAngle = (hatchOpen) ? hatchAngle : 0;
-		hatch.localEulerAngles = Vector3.right * Mathf.LerpAngle (hatch.localEulerAngles.x, hatchTargetAngle, Time.deltaTime);
+		hatch.localEulerAngles = Vector3.right * Mathf.LerpAngle(hatch.localEulerAngles.x, hatchTargetAngle, Time.deltaTime);
 
-		HandleCheats ();
+		HandleCheats();
+		RemoteHatch();
+	}
+
+	void RemoteHatch()
+	{
+		if (Input.GetKeyDown(remoteHatch))
+		{
+			ToggleHatch();
+		}
+	}
+	void CustomCodeAlStart()
+	{
+		//#init 
+
+	}
+	void InitNavigator()
+	{
+		var UINavShip = GetComponent<UI_NavigatorTarget>();
+		if (UINavShip != null)
+		{
+			UINavShip.ShowNavigator();
+		}
 	}
 
 	public bool IsThePlayerPiloting()
@@ -158,6 +181,7 @@ public class Ship : GravityObject {
 
 	public void TogglePiloting () {
 		if (shipIsPiloted) {
+			InitNavigator(); // Al.code
 			StopPilotingShip ();
 		} else {
 			PilotShip ();
@@ -173,7 +197,8 @@ public class Ship : GravityObject {
 		pilot.Camera.transform.parent = camViewPoint;
 		pilot.Camera.transform.localPosition = Vector3.zero;
 		pilot.Camera.transform.localRotation = Quaternion.identity;
-		pilot.gameObject.SetActive (false);
+		pilot.SetActive (false);
+		// pilot.gameObject.SetActive (false);
 		hatchOpen = false;
 		window.SetActive (false);
 
@@ -187,7 +212,8 @@ public class Ship : GravityObject {
 		pilot.transform.position = pilotSeatPoint.position;
 		pilot.transform.rotation = pilotSeatPoint.rotation;
 		pilot.Rigidbody.velocity = rb.velocity;
-		pilot.gameObject.SetActive (true);
+		pilot.SetActive (true);
+		// pilot.gameObject.SetActive (true);
 		window.SetActive (true);
 		pilot.ExitFromSpaceship ();
 	}

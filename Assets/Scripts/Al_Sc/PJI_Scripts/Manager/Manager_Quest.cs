@@ -206,8 +206,9 @@ public class Manager_Quest : MonoBehaviour
                 //     "OK",
                 //     () => clicked = true
                 // );
-                yield return new WaitForSeconds(2f);
-                clicked = true;
+                // yield return new WaitForSeconds(1.5f);
+                Manager_UI.Instance.DisplayInterruptMessage(t.npcT, () => clicked = true);
+                // clicked = true;
 
                 yield return new WaitUntil(() => clicked);
             }
@@ -216,7 +217,16 @@ public class Manager_Quest : MonoBehaviour
                 // Manager_UI.Instance.ShowYapping(t.npcT);
                 // Subtitle kecil (non-blocking)
                 // ShowSubtitle(t.npcT);
-                yield return new WaitForSeconds(2f);
+                // Menampilkan subtitle dengan callback
+                // yield return new WaitForSeconds(2f);
+                bool iswaitShow = false;
+                Manager_UI.Instance.ShowSubtitleWithCallback(t.npcT, 4f, () => 
+                {
+                    iswaitShow = true;
+                });
+
+                yield return new WaitUntil(() => iswaitShow);
+                // yield return new WaitForSeconds(4f);
                 // Manager_UI.Instance.HideYapping();
             }
         }

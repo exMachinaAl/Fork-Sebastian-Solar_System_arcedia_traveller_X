@@ -17,7 +17,7 @@ MonoBehaviour:
   terrainMaterial: {fileID: 2100000, guid: 9a92b2d83899fbb449c5497dfd19e7d1, type: 2}
   hasAtmosphere: 1
   atmosphereSettings: {fileID: 11400000, guid: 6200e0f4932a00f4689c7ef0639f0b32, type: 2}
-  hasOcean: 1
+  hasOcean: 0
   oceanLevel: 1
   oceanSettings: {fileID: 11400000, guid: 7edd12301731e5147ba7807505917a44, type: 2}
   shadingDataCompute: {fileID: 7200000, guid: f3a2904f78271471481822700022a157, type: 3}

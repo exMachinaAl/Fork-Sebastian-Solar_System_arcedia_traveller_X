@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Story_OfMerkury
   m_EditorClassIdentifier: 
   questId: sty_merkurius1
-  questTitle: perjalanan ke merkurius
-  questDescription: "apapun itu tentang merkurius\t"
+  questTitle: Penejelajahan Merkurius
+  questDescription: "Merkurius adalah sunyi yang paling dekat dengan cahaya.\nIa
+    mengelilingi Matahari seperti pemikir tua yang setia, terlalu dekat dengan sumber
+    kebenaran hingga tak sempat berlindung dari panasnya.\n\nPermukaannya penuh luka\u2014kawah-kawah
+    yang tak pernah disembuhkan waktu. Setiap retakan adalah ingatan akan benturan
+    masa lalu, tentang kerasnya menjadi yang pertama dan terdepan. Ia tak bersuara,
+    tak berangin, hampir tanpa napas, seolah memilih diam daripada berpura-pura hidup."
   questStep:
   - stepId: sty_merkurius_step_1
-    subTitleQuest: 
+    subTitleQuest: Cari data suhu
     completionMode: 1
     objective:
       idItem: 
@@ -38,22 +43,76 @@ MonoBehaviour:
       dialogMode: 0
       npcT: mari kita cari tahu
       npcV: {fileID: 0}
-    npcTalkAfter: []
+    npcTalkAfter:
+    - npcName: 
+      dialogMode: 0
+      npcT: 
+      npcV: {fileID: 0}
     rewardPerStep:
       scienceCredit: 0
   - stepId: sty_merkurius_step_2
-    subTitleQuest: merkurius adalah planet terpanas karena?
+    subTitleQuest: Temukan sumber air
     completionMode: 1
     objective:
       idItem: 
       valueItem: 0
     itemId: 
     requiredAmount: 0
-    triggerId: 
+    triggerId: sty_merkurius_step_2
     npcTalkBefore:
     - npcName: Dval
       dialogMode: 0
-      npcT: hmm, sudah waktunya menjelejah sedikit
+      npcT: Cairan hambar penyelamat kita, carilah...
+      npcV: {fileID: 0}
+    - npcName: Dval
+      dialogMode: 0
+      npcT: Terlihat...
+      npcV: {fileID: 0}
+    - npcName: Dval
+      dialogMode: 0
+      npcT: ( Menuju ke sumber )
+      npcV: {fileID: 0}
+    npcTalkAfter:
+    - npcName: Dal
+      dialogMode: 0
+      npcT: sepertinya ada tanda tanda
+      npcV: {fileID: 0}
+    rewardPerStep:
+      scienceCredit: 0
+  - stepId: sty_merkurius_step_3
+    subTitleQuest: Konidisi Atmosfir
+    completionMode: 1
+    objective:
+      idItem: 
+      valueItem: 0
+    itemId: 
+    requiredAmount: 0
+    triggerId: sty_merkurius_step_3
+    npcTalkBefore:
+    - npcName: Dval
+      dialogMode: 0
+      npcT: Pastikan lapisan planet ini melindungi kalian
+      npcV: {fileID: 0}
+    npcTalkAfter:
+    - npcName: Dal
+      dialogMode: 0
+      npcT: sepertinya ada tanda tanda
+      npcV: {fileID: 0}
+    rewardPerStep:
+      scienceCredit: 0
+  - stepId: sty_merkurius_step_4
+    subTitleQuest: Sang surya
+    completionMode: 1
+    objective:
+      idItem: 
+      valueItem: 0
+    itemId: 
+    requiredAmount: 0
+    triggerId: sty_merkurius_step_4
+    npcTalkBefore:
+    - npcName: Dval
+      dialogMode: 0
+      npcT: Bukankah benda besar ini terlalu dekat...
       npcV: {fileID: 0}
     npcTalkAfter:
     - npcName: Dal
